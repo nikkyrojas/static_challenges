@@ -1,57 +1,128 @@
- html {
-     font-size: 10px;
- }
+* {
+    margin: 0;
+    padding: 0;
+}
 
- body {
-     background-color: #333;
-     color: whitesmoke;
+body{
+    background: #fff;
+    color: black;
+    font-size: 6px;
+}
+
+
+ .grid {
+    display: grid;
+    grid-template-columns: 1fr .25fr;
+    grid-template-rows: 20px 15px 1.5fr 10px .5fr 30px; 
+    grid-template-areas: 
+    "title title"
+    "sublink sublink"
+    "image sideimages"
+    "header sideimages"
+    "text sideimages"
+    "footer footer";
+ }
+ /* .grid > div:nth-of-type(3) {
+ grid-column: 1/2;
+ } */
+
+ .title {
+    grid-area: title;
+    background-color: rgb(169, 35, 35);
+    border-style: solid;
+    border-width: .5px;
+    border-color: black;
  }
  
- h1 {
-    background-color: rgb(169, 35, 35);
-    padding: 5px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
-    font-size: 15px;
+ .sublink {
+    grid-area: sublink;
+    background-color: #333;
+    color: white;
+ }
+ 
+ .sideimages {
+    grid-area: sideimages;
  }
 
- h2 {
+ .header {
+      grid-area: header;
+      font-size: 7px;
+      font-weight: bold;
+      padding-left: 2%;
+  }
+
+  .text {
+       grid-area: text;
+        font-size: 5px;
+       
+   }
+ 
+   .footer {
+    grid-area: footer;
+    font-size: 5px;
+    background-color: #333;
+    color: white;
+ }
+
+h1 {
+    color: whitesmoke;
+    font-size: 8px;
+    padding: 1%;
+ }
+ 
+
+h2 {
+    float: bottom;
     font-size: 12px;
+    color: black;
+ }
+
+ h3 {
+    float: right;
+    font-size: 6px;
+    color: white;
+    padding: 1%;
  }
 .img-museum {
-    width: 600px;
-    height: 300px;
+    width: 300px;
+    height: 150px;
+    float: left;
     background-image: url(../images/1.jpg); 
     background-size: cover;
     background-repeat: no-repeat;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
 }
 .img-larimer {
-    width: 200px;
-    height: 50px;
+    width: 100px;
+    height: 40px;
+    padding-top: 4px;
     padding-bottom: 10%;
     background-image: url(../images/2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
-.img-molly {
-    width: 200px;
-    height: 50px;
-    padding-bottom: 10%;
-    background-image: url(../images/6.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+
 .img-millenium {
-    width: 200px;
-    height: 50px;
-    padding-bottom: 10%;
+    width: 100px;
+    height: 40px;
+    padding: 4px;
     background-image: url(../images/5.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
+.img-molly {
+    width: 80px;
+    height: 70px;
+    padding: 4px;
+    background-image: url(../images/6.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 p {
     word-wrap: break-word;
-    width: 40%;
-
-}
+    width: 70%;
+    padding: 2%;
+} 
