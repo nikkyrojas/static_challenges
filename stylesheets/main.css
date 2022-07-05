@@ -6,14 +6,14 @@
 body{
     background: #fff;
     color: black;
-    font-size: 6px;
+    font-size: 10px;
 }
 
 
  .grid {
     display: grid;
-    grid-template-columns: 1fr .25fr;
-    grid-template-rows: 20px 15px 1.5fr 10px .5fr 30px; 
+    grid-template-columns: 1fr .5fr;
+    grid-template-rows: 60px 40px 470px 20px 1fr 60px; 
     grid-template-areas: 
     "title title"
     "sublink sublink"
@@ -22,9 +22,6 @@ body{
     "text sideimages"
     "footer footer";
  }
- /* .grid > div:nth-of-type(3) {
- grid-column: 1/2;
- } */
 
  .title {
     grid-area: title;
@@ -42,31 +39,42 @@ body{
  
  .sideimages {
     grid-area: sideimages;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15px 150px 15px 145px 15px 130px;
+    grid-template-areas:
+    "img-larimer-label"
+    "img-larimer"
+    "img-millenium-label"
+    "img-millenium"
+    "img-molly-label"
+    "img-molly"
  }
 
  .header {
       grid-area: header;
-      font-size: 7px;
+      font-size: 15px;
       font-weight: bold;
       padding-left: 2%;
   }
 
   .text {
        grid-area: text;
-        font-size: 5px;
+        font-size: 10px;
        
    }
  
    .footer {
     grid-area: footer;
-    font-size: 5px;
+    font-size: 10px;
     background-color: #333;
     color: white;
  }
 
 h1 {
     color: whitesmoke;
-    font-size: 8px;
+    font-size: 20px;
     padding: 1%;
  }
  
@@ -79,25 +87,25 @@ h2 {
 
  h3 {
     float: right;
-    font-size: 6px;
+    font-size: 10px;
     color: white;
-    padding: 1%;
+    padding-right: 60px;
  }
 .img-museum {
-    width: 300px;
-    height: 150px;
+    width: 825px;
+    height: 425px;
     float: left;
     background-image: url(../images/1.jpg); 
     background-size: cover;
     background-repeat: no-repeat;
     border-style: solid;
-    border-width: 5px;
+    border-width: 25px;
     border-color: white;
 }
 .img-larimer {
-    width: 100px;
-    height: 40px;
-    padding-top: 4px;
+    width: 120px;
+    height: 100px;
+    padding-top: 15px;
     padding-bottom: 10%;
     background-image: url(../images/2.jpg);
     background-size: cover;
@@ -105,24 +113,40 @@ h2 {
 }
 
 .img-millenium {
-    width: 100px;
-    height: 40px;
-    padding: 4px;
+    width: 120px;
+    height: 100px;
+    padding: 15px;
     background-image: url(../images/5.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-}
+    }
 .img-molly {
-    width: 80px;
-    height: 70px;
-    padding: 4px;
+    width: 120px;
+    height: 110px;
+    padding: 15px;
     background-image: url(../images/6.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    }
+
+.img-molly-label{
+font-weight: bold;
+padding: 2%;
 }
+
+.img-millenium-label{
+font-weight: bold;
+padding: 2%;
+}
+
+.img-larimer-label{
+font-weight: bold;
+padding: 2%;
+}
+
 
 p {
     word-wrap: break-word;
-    width: 70%;
-    padding: 2%;
+    width: 95%;
+    padding: 1%;   
 } 
