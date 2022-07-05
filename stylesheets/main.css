@@ -1,49 +1,150 @@
- html {
-     font-size: 10px;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fff;
+    color: black;
+    font-size: 10px;
+}
+
+
+ .grid {
+    display: grid;
+    grid-template-columns: 1fr .5fr;
+    grid-template-rows: 60px 40px 450px 20px 1fr 60px; 
+    grid-template-areas: 
+    "title title"
+    "sublink sublink"
+    "image sideimages"
+    "header sideimages"
+    "text sideimages"
+    "footer footer";
  }
 
- body {
-     background-color: #333;
-     color: whitesmoke;
+ .title {
+    grid-area: title;
+    background-color: rgb(169, 35, 35);
+    border-style: solid;
+    border-width: .5px;
+    border-color: black;
  }
  
- h1 {
-    background-color: rgb(169, 35, 35);
-    padding: 5px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
-    font-size: 15px;
+ .sublink {
+    grid-area: sublink;
+    background-color: #333;
+    color: white;
+ }
+ 
+ .sideimages {
+    grid-area: sideimages;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20px 170px 20px 165px 20px 140px;
+    grid-template-areas:
+    "img-larimer-label"
+    "img-larimer"
+    "img-millenium-label"
+    "img-millenium"
+    "img-molly-label"
+    "img-molly"
  }
 
- h2 {
+ .header {
+      grid-area: header;
+      font-size: 15px;
+      font-weight: bold;
+      padding-left: 2%;
+  }
+
+  .text {
+       grid-area: text;
+       font-size: 10px;
+       
+   }
+ 
+   .footer {
+    grid-area: footer;
+    font-size: 10px;
+    background-color: #333;
+    color: white;
+ }
+
+h1 {
+    color: whitesmoke;
+    font-size: 20px;
+    padding: 1%;
+ }
+ 
+
+h2 {
+    float: bottom;
     font-size: 12px;
+    color: black;
+ }
+
+ h3 {
+    float: right;
+    font-size: 10px;
+    color: white;
+    padding: 1px;
+ }
+
+ p {
+     word-wrap: break-word;
+     width: 95%;
+     padding: 1%;
  }
 .img-museum {
-    width: 600px;
-    height: 300px;
+    width: 825px;
+    height: 400px;
+    float: left;
     background-image: url(../images/1.jpg); 
     background-size: cover;
     background-repeat: no-repeat;
+    border-style: solid;
+    border-width: 25px;
+    border-color: white;
 }
 .img-larimer {
-    width: 200px;
-    height: 50px;
-    padding-bottom: 10%;
+    width: 140px;
+    height: 120px;
+    padding-top: 15px;
     background-image: url(../images/2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.img-millenium {
+    width: 120px;
+    height: 100px;
+    padding: 15px;
+    background-image: url(../images/5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+    
 .img-molly {
-    width: 200px;
-    height: 50px;
-    padding-bottom: 10%;
+    width: 120px;
+    height: 110px;
+    padding: 15px;
     background-image: url(../images/6.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-}
-p {
-    word-wrap: break-word;
-    width: 40%;
+    }
 
+.img-molly-label{
+font-weight: bold;
+padding: 2%;
+}
+
+.img-millenium-label{
+font-weight: bold;
+padding: 2%;
+}
+
+.img-larimer-label{
+font-weight: bold;
+padding: 2%;
 }
