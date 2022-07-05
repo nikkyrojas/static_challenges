@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-body{
+body {
     background: #fff;
     color: black;
     font-size: 10px;
@@ -13,7 +13,7 @@ body{
  .grid {
     display: grid;
     grid-template-columns: 1fr .5fr;
-    grid-template-rows: 60px 40px 470px 20px 1fr 60px; 
+    grid-template-rows: 60px 40px 450px 20px 1fr 60px; 
     grid-template-areas: 
     "title title"
     "sublink sublink"
@@ -39,10 +39,9 @@ body{
  
  .sideimages {
     grid-area: sideimages;
-
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 15px 150px 15px 145px 15px 130px;
+    grid-template-rows: 20px 170px 20px 165px 20px 140px;
     grid-template-areas:
     "img-larimer-label"
     "img-larimer"
@@ -61,7 +60,7 @@ body{
 
   .text {
        grid-area: text;
-        font-size: 10px;
+       font-size: 10px;
        
    }
  
@@ -89,11 +88,17 @@ h2 {
     float: right;
     font-size: 10px;
     color: white;
-    padding-right: 60px;
+    padding: 1px;
+ }
+
+ p {
+     word-wrap: break-word;
+     width: 95%;
+     padding: 1%;
  }
 .img-museum {
     width: 825px;
-    height: 425px;
+    height: 400px;
     float: left;
     background-image: url(../images/1.jpg); 
     background-size: cover;
@@ -103,10 +108,9 @@ h2 {
     border-color: white;
 }
 .img-larimer {
-    width: 120px;
-    height: 100px;
+    width: 140px;
+    height: 120px;
     padding-top: 15px;
-    padding-bottom: 10%;
     background-image: url(../images/2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -120,6 +124,7 @@ h2 {
     background-size: cover;
     background-repeat: no-repeat;
     }
+    
 .img-molly {
     width: 120px;
     height: 110px;
@@ -143,10 +148,3 @@ padding: 2%;
 font-weight: bold;
 padding: 2%;
 }
-
-
-p {
-    word-wrap: break-word;
-    width: 95%;
-    padding: 1%;   
-} 
